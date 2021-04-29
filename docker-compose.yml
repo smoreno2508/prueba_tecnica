@@ -1,0 +1,42 @@
+version: "3"
+services:
+    www:
+        build: .
+        ports: 
+            - "8080:80"
+        volumes:
+            - ./www:/var/www/html/
+        links:
+            - db #para linkear al container name de mysql
+        networks:
+            - default
+    db:
+        image: mysql
+        ports: 
+            - "3307:3306" #al tratar de realizar la conexión por 3306 me aparecia unable to connect db por lo que se cambio puerto para correcto funcionamiento
+        volumes:
+            - ./dump:/docker-entrypoint-initdb.d
+            - persistent:/var/lib/mysql
+        networks:
+            - default
+        environment:
+            MYSQL_DATABASE: "${DB_NAME}" #las variables ${VARIABLE} estan definidas en el archivo .env
+            MYSQL_USER: "${DB_USERNAME}"
+            MYSQL_PASSWORD: "${DB_PASSWORD}"
+            MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
+        container_name: db
+    phpmyadmin:
+        depends_on:
+            - db
+        links: 
+            - db
+        image: phpmyadmin/phpmyadmin
+        restart: always
+        ports:
+            - 8000:80
+        environment:
+            PMA_HOST: db
+            MYSQL_USERNAME: "${DB_USERNAME}"
+            MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
+volumes:
+    persistent:
