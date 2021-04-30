@@ -2,7 +2,7 @@
 
 ```
 La aplicación esta bajo el puerto 8080 y por defecto el proyecto en CI4 comienza 
-en public siendo esta la raiz http://localhost:8080/public/ 
+en public siendo esta la raiz http://localhost:8080
 phpmyadmin bajo puerto 8000 http://localhost:8000
 
 Base de datos:
@@ -33,4 +33,11 @@ Si tuviste dificultades allevantar el ambiente de desarrollo ¿Cuáles fueron la
 
 ¿Qué procedimiento utilizaste para subir tu proyecto a Github u otro?  
     R.- Lo hice a través de línea de comandos.
+    
+    
+ ultimo commit se realizaron validaciones varias
+ se hizo 
+ git add . para agregar los archivos
+ git commit -m "generico" para realizar envio de los cambios
+ git push para mandar cambios a repo en github 
 ```
