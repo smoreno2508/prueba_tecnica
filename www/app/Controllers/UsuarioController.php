@@ -21,15 +21,14 @@ class UsuarioController extends Controller
 
         return view('usuarios/index', $datos);
     }
-    // la nueva funcionalidad de ci4 es poder realizar las operaciones que antes se realizaban en el modelo en el controllador 
-    // solo es necesario usar el modelo con la palabra reservada use 
-    public function guardar()
-    {     
+
+    public function agregarRender($nombre, $email){
+
         $usuario = new UsuarioModel();
         $fecha = date('Y-m-d');
         $datos = [
-            'nombre'         => $this->request->getPost('nombre'),
-            'email'          => $this->request->getPost('email'),
+            'nombre'         => $nombre,
+            'email'          => $email,
             'fecha_registro' => $fecha
         ];
         
@@ -45,6 +44,33 @@ class UsuarioController extends Controller
             $usuario->insert($datos);
             return redirect()->to(base_url('/'))->with('agregar', 'Usuario agregado correctamente');
         }
+    }
+    // la nueva funcionalidad de ci4 es poder realizar las operaciones que antes se realizaban en el modelo en el controllador 
+    // solo es necesario usar el modelo con la palabra reservada use 
+    public function agregar()
+    {     
+        $nombre = $this->request->getPost('nombre');
+        $email = $this->request->getPost('email');
 
+        $this->agregarRender($nombre, $email);
+        return redirect()->to(base_url('/'));
+    }
+    
+    // se hizo un nuevo metodo distinto al modal para probar /nuevo
+    public function nuevo(){
+
+        if($_POST){
+            $nombre = $this->request->getPost('nombre');
+            $email = $this->request->getPost('email');
+            $this->agregarRender($nombre, $email);
+            return redirect()->to(base_url('/'));
+        }
+
+        $datos = [
+            'header'=> view('template/header'),
+            'footer'=> view('template/footer')
+        ];
+
+        return view('usuarios/nuevo', $datos);
     }
 }

@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="<?= base_url('/assets/css/jquery.dataTables.min.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('/assets/css/estilos.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('/public/assets/css/jquery.dataTables.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('/public/assets/css/estilos.css') ?>">
     <!-- FIn estilos -->
 </head>
 

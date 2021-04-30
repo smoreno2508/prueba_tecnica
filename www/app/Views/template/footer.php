@@ -1,10 +1,10 @@
 </div>
 <!-- Scripts  -->
-<script src="<?= base_url('/assets/js/jquery-3.5.1.slim.min.js') ?>"></script>
-<script src="<?= base_url('/assets/js/popper.min.js') ?>"></script>
-<script src="<?= base_url('/assets/js/bootstrap.min.js') ?>"></script>
-<script src="<?= base_url('/assets/js/jquery.dataTables.min.js') ?>"></script>
-<script src="<?= base_url('/assets/js/sweetalert2@10.js') ?>"></script>
+<script src="<?= base_url('/public/assets/js/jquery-3.5.1.slim.min.js') ?>"></script>
+<script src="<?= base_url('/public/assets/js/popper.min.js') ?>"></script>
+<script src="<?= base_url('/public/assets/js/bootstrap.min.js') ?>"></script>
+<script src="<?= base_url('/public/assets/js/jquery.dataTables.min.js') ?>"></script>
+<script src="<?= base_url('/public/assets/js/sweetalert2@10.js') ?>"></script>
 
 <script>
     $(document).ready(function() {

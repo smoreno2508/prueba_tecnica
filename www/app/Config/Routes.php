@@ -35,7 +35,8 @@ $routes->setAutoRoute(true);
 // $routes->get('/', 'Home::index');
 // rutas necesarias para los requerido
 $routes->get('/', 'UsuarioController::index');
-$routes->post('guardar', 'UsuarioController::guardar');
+$routes->post('agregar', 'UsuarioController::agregar');
+$routes->add('nuevo', 'UsuarioController::nuevo');
 
 /*
  * --------------------------------------------------------------------

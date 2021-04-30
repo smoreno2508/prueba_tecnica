@@ -2,7 +2,7 @@
 
 <!-- Modal para agregar Usuario -->
 <!-- Modal -->
-<form action="<?=base_url('/guardar')?>" method="post" enctype="multipart/form-data">
+<form action="<?=base_url('/agregar')?>" method="post" enctype="multipart/form-data">
     <div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="agregarModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -45,7 +45,7 @@
 
     <!-- Inicio cuerpo del card y tabla -->
     <div class="card-body">
-        <table class="table table-striped" id="tabla">
+        <table class="table table-striped table-responsive-xs" id="tabla">
             <thead>
                 <tr>
                     <th class="th-sm" scope="col">#</th>
@@ -78,7 +78,7 @@
 
     <div class="card-footer text-muted table-footer">
         <?php if ($pager) : ?>
-            <?php $pagi_path = 'public/'; ?>
+            <?php $pagi_path = '/'; ?>
             <?php $pager->setPath($pagi_path); ?>
             <?= $pager->links() ?>
         <?php endif ?>
