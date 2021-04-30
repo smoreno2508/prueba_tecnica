@@ -39,6 +39,7 @@
     <div class="card-header table-title">
         <h4 class="text-white">Administrador <b>Usuarios</b>
             <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#agregarModal"><i class="material-icons">&#xE147;</i> <span>Agregar Usuario</span></a>
+            <a href="/nuevo" class="btn btn-primary"><i class="material-icons">&#xE147;</i> <span>Vista nuevo</span></a>
         </h4>
     </div>
     <!-- fin inicio tabla -->
